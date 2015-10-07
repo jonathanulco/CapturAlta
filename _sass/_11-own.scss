@@ -1,0 +1,196 @@
+/* ----------------------------- */
+/* ==own stylings                */
+/*		by						 */ 
+/* Jonathan Pansiot              */
+/* ----------------------------- */
+/* ----------------------------- */
+/* Sass Variables                */
+/* ----------------------------- */
+/* ----------------------------- */
+/* General                       */
+/* ----------------------------- */
+body {background:#000; color:#fefefe;}
+ul[class*=-list] {margin:0;padding:0;}
+ul[class*=-list] li {list-style:none;}
+section h2 {padding-top:100px;}
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+nav {position:fixed;top:0;left:0;right:0;padding:20px 0;text-transform:uppercase;transition:all .5s ease;
+    .container {}
+    .navbar-header,
+    .navbar-right {display:inline-block;}
+    li {display:inline-block;list-style:none;}
+    a {display:block;padding:15px;color:#efefef;text-decoration:none;}
+    a:hover {background: rgba(255, 255, 255, 0.2);color:#fff;transition:background .5s ease;}
+    a:active,
+    a:focus  {color:#fff;}
+    
+}
+.scrolling-nav {padding:0;top:0;background:#000;border-bottom:1px solid #fff;transition:all .5s ease;}
+
+nav button {display:none;}
+/* ----------------------------- */
+/* Header                        */
+/* ----------------------------- */
+.intro {background:url(img/intro-bg.jpg) 50% 100%;background-size:cover;box-shadow:inset 0px -100px 120px 0px #000;font-size:2em;animation: imageAnimation 4s linear;
+    h1 {font-family:'Limelight';font-size:4em;color:rgba(255,255,255, 0.7);margin-bottom:.2em;animation: titleAnimation 4.5s linear;}
+    .content-int {height:100vh;}
+    .block-header {padding-top:25vh;}
+    .btn-circle {display:inline-block;width:70px;height:70px;margin-top:50px;padding:4px 10px;background: rgba(0, 0, 0, 0) none repeat scroll 0 0;border:2px solid #fff;border-radius:50%;color:#fff;font-size:40px;transition: background 0.3s ease-in-out 0s;}
+    
+    .btn-circle:hover,
+    .btn-circle:focus {outline: 0; color: #fff; background: rgba(255,255,255,.1); }
+    .btn-circle img {transition-duration: 1.2s; } 
+    .btn-circle:hover img {animation: pulse 1.5s infinite linear;}
+}
+section#about {
+    .content-int {height:100vh;}
+}
+section#contact { 
+    li {display:inline-block;}
+    form {padding:30px 50px;margin-bottom:5em;color:#219ab3;border:3px solid #219ab3;border-radius:4px;text-align:left;text-transform:uppercase;}
+    label,
+    input,
+    textarea {display:block;background:transparent;}
+    input,
+    textarea {margin-bottom:2em;border:1px solid #219ab3;border-radius:4px;}
+    input[type="email"] {width:99%;}
+    textarea {width:98%;}
+
+    .btn {display:inline-block;margin:0 20px;padding:10px 16px;border:1px solid #219ab3;border-radius:4px;color:#219ab3;font-size:1.2em;text-decoration:none;text-transform:uppercase;transition:all 0.3s ease-in-out 0s;}
+    .btn:hover,
+    .btn:focus {background:#219ab3;color:#000;}
+}
+footer {padding-top:10em;}
+/* ----------------------------- */
+/* Animation                     */
+/* ----------------------------- */
+@keyframes titleAnimation { 
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes imageAnimation { 
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    8% {
+        opacity: 1;
+        transform: scale(1.05);
+        animation-timing-function: ease-in-out;
+    }
+    33% {
+        opacity: 1;
+        transform: scale(1.1) rotate(1deg);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1) rotate(2deg);
+    }
+    70% {
+        opacity: 0.9;
+        transform: scale(1.1) rotate(1deg);
+    }
+    100% { opacity:1;
+            transform: scale(1) rotate(0deg);
+          }
+}
+@-webkit-keyframes imageAnimation { 
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    8% {
+        opacity: 1;
+        transform: scale(1.05);
+        animation-timing-function: ease-in-out;
+    }
+    33% {
+        opacity: 1;
+        transform: scale(1.1) rotate(1deg);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1) rotate(2deg);
+    }
+    75% {
+        opacity: 0.9;
+        transform: scale(1.1) rotate(1deg);
+    }
+    100% { opacity:1;
+            transform: scale(1) rotate(0deg);
+          }
+}
+@-moz-keyframes pulse {    
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {    
+    0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.02);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes pulse {    
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {    
+    0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.02);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
